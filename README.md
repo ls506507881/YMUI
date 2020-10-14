@@ -23,3 +23,49 @@
   npm install (or 'yarn')
   npm run dev (or 'yarn dev')
 ```
+
+### 引入 Vue Router 4
+
+- 安装 vue router
+
+```
+  // 使用命令号查看 vue-router所有版本号
+  npm info vue-router versions
+
+  // 安装最新版
+  yarn add vue-router@4.0.0-beta.13
+```
+
+- 初始化 vue router
+
+```
+  - 新建 history 对象
+  - 新建 router 对象
+  - 引入TypeScript
+  - app.use(router)
+  - 添加<router-view>  // 显示路由
+  - 添加<router-link>  // 通过to跳转页面
+
+  // src/main.ts
+  import { createApp } from 'vue'
+  import App from './App.vue'
+  import './index.css'
+  import { createWebHashHistory, createRouter } from 'vue-router'
+  // vue-router 3种路由结构
+  // createMemoryHistory, // 内存型路由
+  // createWebHashHistory,  // Hash型路由
+  // createWebHistory,  // History型路由
+
+  import Frank from './components/Frank.vue'
+
+  const history = createWebHashHistory()
+  const router = createRouter({
+    history,
+    routes: [{ path: '/', component: Frank }],
+  })
+
+  const app = createApp(App)
+  app.use(router)
+  app.mount('#app')
+
+```
