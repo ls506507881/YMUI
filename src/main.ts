@@ -1,15 +1,13 @@
+import './lib/gulu.scss'
+import './index.scss'
+import './assets/styles/variable.scss'
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
-import { createWebHashHistory, createRouter } from 'vue-router'
-import Frank from './components/Frank.vue'
-
-const history = createWebHashHistory()
-const router = createRouter({
-  history,
-  routes: [{ path: '/', component: Frank }],
-})
+import { router } from './router'
+import 'github-markdown-css'
+import Markdown from './components/Markdown.vue'
 
 const app = createApp(App)
 app.use(router)
 app.mount('#app')
+app.component('Markdown', Markdown)
