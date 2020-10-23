@@ -3,8 +3,8 @@
     <div class="topnavAndBanner">
       <Topnav />
       <div class="banner">
-        <h1>轱辘UI</h1>
-        <h2>一个厉害的 UI 框架</h2>
+        <h1>YUMI</h1>
+        <h2>悦米公用组件库</h2>
         <p class="actions">
           <a href="https://github.com">GitHub</a>
           <router-link to="/doc">开始</router-link>
@@ -12,13 +12,13 @@
       </div>
     </div>
     <div class="features">
-      <ul>
+      <!-- <ul>
         <li>
           <svg>
             <use xlink:href="#icon-vue"></use>
           </svg>
           <h3>基于 Vue 3</h3>
-          <p>骄傲地使用了 Vue 3 Composition API</p>
+          <p>使用了 Vue 3 Composition API</p>
         </li>
         <li>
           <svg>
@@ -34,8 +34,11 @@
           <h3>代码易读</h3>
           <p>每个组件的源代码都极其简洁</p>
         </li>
-      </ul>
+      </ul> -->
+      <h3>悦米常用组件封装</h3>
+      <p>根据悦米以往项目，抽离常用的组件。</p>
     </div>
+    <div class="copy">MIT Licensed | Copyright © 2020 present yuemia</div>
   </div>
 </template>
 <script lang="ts">

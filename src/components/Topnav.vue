@@ -2,9 +2,10 @@
   <div class="topnav">
     <router-link to="/"
                  class="logo">
-      <svg class="icon">
+      YUMI
+      <!-- <svg class="icon">
         <use xlink:href="#icon-king"></use>
-      </svg>
+      </svg> -->
     </router-link>
     <ul class="menu">
       <li>
