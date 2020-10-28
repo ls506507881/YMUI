@@ -33,6 +33,48 @@
           <li>
             <router-link to="/doc/icon">Icon 组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/spinner">Spinner 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/load">Load 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/svg-icon">SvgIcon 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/field">Field 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/scroll">Scroll 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/scroll-ceil">ScrollCeil【吸顶】 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tab">Tab 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/img">Img（ym-img） 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/img">Img（ym-img） 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/video">Video（ym-video） 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/message">Message 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/float-btn">FloatBtn 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/not-found">NotFound 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/panel-title">PanelTitle、Collapse 组件</router-link>
+          </li>
         </ol>
       </aside>
       <main>
@@ -52,64 +94,49 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-$aside-index: 10;
-
-.layout {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  > .nav {
-    flex-shrink: 0;
-  }
-  > .content {
-    flex-grow: 1;
-    padding-top: 60px;
-    padding-left: 156px;
-    @media (max-width: 500px) {
-      padding-left: 0;
-    }
-  }
-}
-.content {
-  display: flex;
-  > aside {
-    flex-shrink: 0;
-  }
-  > main {
-    flex-grow: 1;
-    padding: 16px;
-    background: white;
-  }
-}
-aside {
-  background: lightblue;
-  width: 150px;
-  padding: 16px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 70px;
-  height: 100%;
-  z-index: $aside-index;
-  > h2 {
-    margin-bottom: 4px;
-    padding: 0 16px;
-  }
-  > ol {
-    > li {
-      > a {
-        display: block;
-        padding: 4px 16px;
-        text-decoration: none;
-      }
-      .router-link-active {
-        background: white;
-      }
-    }
-  }
-}
-main {
-  overflow: auto;
-}
+<style lang="stylus" scoped>
+$aside-index = 10
+.layout
+  display flex
+  flex-direction column
+  height 100vh
+  .nav
+    flex-shrink 0
+  .content
+    flex-grow 1
+    padding-top 60px
+    padding-left 156px
+    @media (max-width: 500px)
+      padding-left 0
+.content
+  display flex
+  aside
+    flex-shrink 0
+  main
+    flex-grow 1
+    padding 16px
+    background white
+aside
+  position fixed
+  top 0
+  left 0
+  z-index $aside-index
+  padding 16px 0
+  padding-top 70px
+  width 150px
+  height 100%
+  background lightblue
+  h2
+    margin-bottom 4px
+    padding 0 16px
+  ol
+    li
+      a
+        display block
+        padding 4px 16px
+        text-decoration none
+      .router-link-active
+        background white
+main
+  overflow auto
 </style>

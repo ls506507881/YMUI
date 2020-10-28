@@ -1,0 +1,142 @@
+
+// 背景图片
+bgImg($url, $postfix = 'png')
+  background-image url($url + '@2x.' + $postfix)
+  background-position center center
+  background-size 100%
+  background-repeat no-repeat
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+    background-image url($url + '@3x.' + $postfix)
+setBgImg($url,$size = 100%,$py=center,$px = center)
+  background-image url($url)
+  background-position-x $px
+  background-position-y $py
+  background-size $size
+  background-repeat no-repeat
+// 不换行
+noWrap()
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+// 多行省略
+ellipsis($num)
+  display -webkit-box
+  overflow hidden
+  text-overflow ellipsis
+  -webkit-box-orient vertical
+  -webkit-line-clamp $num
+// 绝对定位布局
+positionTL($top = 0, $left = 0, $tl = 0, $tt = 0)
+  translateEl($tl, $tt)
+  position absolute
+  top $top
+  left $left
+positionTR($top = 0, $right = 0, $tl = 0, $tt = 0)
+  translateEl($tl, $tt)
+  position absolute
+  top $top
+  right $right
+positionBL($bottom = 0, $left = 0, $tl = 0, $tt = 0)
+  translateEl($tl, $tt)
+  position absolute
+  bottom $bottom
+  left $left
+positionBR($bottom = 0, $right = 0, $tl = 0, $tt = 0)
+  translateEl($tl, $tt)
+  position absolute
+  right $right
+  bottom $bottom
+translateEl($left = 0, $top = 0)
+  transform translate($left, $top)
+// 绝对定位布局
+positionAlign($left = 0, $top = 0)
+  position absolute
+  top $top
+  left $left
+  transform translate($left ? -50% : 0, $top ? -50% : 0)
+// 占满父级绝对定位
+positionFull($t = 0, $r = 0, $b = 0, $l = 0)
+  position absolute
+  top $t
+  right $r
+  bottom $b
+  left $l
+  -webkit-overflow-scrolling touch
+// 盒子内容对齐
+flexAlign($h = flex-start, $v = center)
+  display flex
+  justify-content $h
+  align-items $v
+// 垂直盒子内容对齐
+flexColAlign($h = flex-start, $v = center)
+  display flex
+  flex-direction column
+  justify-content $v
+  align-items $h
+// 1px边框
+setTopLine($c = $color-bd)
+  position absolute
+  top 0
+  right 0
+  left 0
+  border-top 1px solid $c
+  color $c
+  content ' '
+  transform scaleY(0.5)
+  transform-origin 0 0
+setBottomLine($c = $color-bd)
+  position absolute
+  right 0
+  bottom 0
+  left 0
+  height 1px
+  border-bottom 1px solid $c
+  color $c
+  content ' '
+  transform scaleY(0.5)
+  transform-origin 0 100%
+setLeftLine($c = $color-bd)
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  width 1px
+  border-left 1px solid $c
+  color $c
+  content ' '
+  transform scaleX(0.5)
+  transform-origin 0 0
+setRightLine($c = $color-bd)
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  width 1px
+  border-right 1px solid $c
+  color $c
+  content ' '
+  transform scaleX(0.5)
+  transform-origin 100% 0
+setLine($c = $color-bd)
+  position absolute
+  top 0
+  left 0
+  width 200%
+  height 200%
+  border 1px solid $c
+  color $c
+  content ' '
+  transform scale(0.5)
+  transform-origin left top
+setLineR($c = $color-bd, $r = $border-r)
+  position absolute
+  top -0.5px
+  left -0.5px
+  width 200%
+  height 200%
+  border 1px solid $c /* px */
+  border-radius $r * 2
+  color $c
+  content ' '
+  transform scale(0.5)
+  transform-origin left top

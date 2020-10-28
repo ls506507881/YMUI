@@ -1,6 +1,6 @@
 import './lib/gulu.scss'
-import './index.scss'
-import './assets/styles/variable.scss'
+import './index.styl'
+import './assets/styles/variable.styl'
 import { createApp } from 'vue'
 import App from './App.vue'
 import { router } from './router'

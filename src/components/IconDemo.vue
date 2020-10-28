@@ -546,27 +546,24 @@ export default {
   // }
 };
 </script>
-<style lang="scss" scoped>
-.container {
+<style lang="stylus" scoped>
+.container
   // padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  & > .label_icon {
-    margin-left: -1px;
-    margin-top: -1px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    & > .label_text {
-      font-style: normal;
-      margin-top: 10px;
-      font-size: 12px;
-    }
-  }
-}
+  display flex
+  flex-wrap wrap
+  justify-content center
+  .label_icon
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    margin-top -1px
+    margin-left -1px
+    width 100px
+    height 100px
+    border 1px solid black
+    .label_text
+      margin-top 10px
+      font-style normal
+      font-size 12px
 </style>
